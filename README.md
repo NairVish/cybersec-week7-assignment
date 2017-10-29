@@ -36,7 +36,7 @@ Here, the closing of the first `a` tag and the opening of the second `a` tag are
 
 ### Demonstration
 
-The following video demonstrates this exploit: https://youtu.be/UWHUU_pFlb8
+The following video demonstrates this exploit in WordPress 4.1: https://youtu.be/UWHUU_pFlb8
 
 ### Other Details
 * **CVEs**: 2015-5622 and 2015-5623
@@ -74,7 +74,7 @@ Here, the closing of the first `a` tag, the `figcaption` tag, and the `figure` t
 
 ### Demonstration
 
-The following video demonstrates this exploit: https://youtu.be/q9XJsXixbcE
+The following video demonstrates this exploit in WordPress 4.0: https://youtu.be/q9XJsXixbcE
 
 ### Other Details
 * **CVE**: 2015-5714
@@ -84,7 +84,7 @@ The following video demonstrates this exploit: https://youtu.be/q9XJsXixbcE
 
 ## #3: Authenticated Stored XSS in YouTube URL Embeds
 
-Again, this vulnerability requires at least Contributor level privileges onto the site. Through this exploit, an attacker could take advantage of YouTube URL embeds to achieve a **stored/persistent** XSS attack that can affect any user who loads the compromised page.
+Again, this vulnerability requires at least Contributor level privileges onto the site. Through this exploit, an attacker could take advantage of YouTube URL embeds to achieve a **stored/persistent** XSS attack that can affect any user who simply loads the compromised page.
 
 ### Recreating the Exploit
 1. Gain access to an account with at least posting-level permissions via social engineering or another exploit. (Alternatively, if the site allows unauthenticated users to post via some special configuration, then an account is not needed.)
@@ -112,7 +112,7 @@ Here, the opening and closing `p` tags surround **2** elements: Some text (`http
 
 ### Demonstration
 
-The following video demonstrates this exploit: https://youtu.be/YuqVKOiPfTU
+The following video demonstrates this exploit in WordPress 4.0: https://youtu.be/YuqVKOiPfTU
 
 ### Other Details
 * **CVE**: 2017-6817
