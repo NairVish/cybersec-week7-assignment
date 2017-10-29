@@ -74,7 +74,7 @@ Here, the closing of the first `a` tag, the `figcaption` tag, and the `figure` t
 
 ### Demonstration
 
-The following video demonstrates this exploit: https://www.youtube.com/watch?v=q9XJsXixbcE
+The following video demonstrates this exploit: https://youtu.be/q9XJsXixbcE
 
 ### Other Details
 * **CVE**: 2015-5714
@@ -112,7 +112,7 @@ Here, the opening and closing `p` tags surround **2** elements: Some text (`http
 
 ### Demonstration
 
-The following video demonstrates this exploit: https://www.youtube.com/watch?v=YuqVKOiPfTU
+The following video demonstrates this exploit: https://youtu.be/YuqVKOiPfTU
 
 ### Other Details
 * **CVE**: 2017-6817
