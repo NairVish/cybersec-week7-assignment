@@ -36,7 +36,7 @@ Here, the closing of the first `a` tag and the opening of the second `a` tag are
 
 ### Demonstration
 
-The following video demonstrates this exploit: [link goes here]
+The following video demonstrates this exploit: https://youtu.be/UWHUU_pFlb8
 
 ### Other Details
 * **CVEs**: 2015-5622 and 2015-5623
@@ -74,7 +74,7 @@ Here, the closing of the first `a` tag, the `figcaption` tag, and the `figure` t
 
 ### Demonstration
 
-The following video demonstrates this exploit: [link goes here]
+The following video demonstrates this exploit: https://www.youtube.com/watch?v=q9XJsXixbcE
 
 ### Other Details
 * **CVE**: 2015-5714
@@ -112,7 +112,7 @@ Here, the opening and closing `p` tags surround **2** elements: Some text (`http
 
 ### Demonstration
 
-The following video demonstrates this exploit: [link goes here]
+The following video demonstrates this exploit: https://www.youtube.com/watch?v=YuqVKOiPfTU
 
 ### Other Details
 * **CVE**: 2017-6817
