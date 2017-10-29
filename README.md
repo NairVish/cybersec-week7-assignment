@@ -77,7 +77,45 @@ Here, the closing of the first `a` tag, the `figcaption` tag, and the `figure` t
 The following video demonstrates this exploit: [link goes here]
 
 ### Other Details
-* **CVEs**: 2015-5714
+* **CVE**: 2015-5714
 * **Type**: XSS
 * **Affects**: WordPress <=4.3
 * **Patched**: WordPress 4.3.1
+
+## Authenticated Stored XSS in YouTube URL Embeds
+
+Again, this vulnerability requires at least Contributor level privileges onto the site. Through this exploit, an attacker could take advantage of YouTube URL embeds to achieve a **stored/persistent** XSS attack that can affect any user who loads the compromised page.
+
+### Recreating the Exploit
+1. Gain access to an account with at least posting-level permissions via social engineering or another exploit. (Alternatively, if the site allows unauthenticated users to post via some special configuration, then an account is not needed.)
+2. Either create a new page/post or modify an existing one.
+3. Use the HTML editor (not the Visual editor) to insert code similar to the following and post. **Here, we demonstrate the vulnerability through the use of an embed shortcode**:
+
+```
+[embed src='https://www.youtube.com/embed/12345\x3csvg <Event-attribute-with-JS-code-here>\x3e'][/embed]
+```
+which WP processes to:
+```
+<p>https://youtube.com/watch?v=12345<svg <Event-attribute-with-JS-code-here>></p>
+```
+
+### Example
+If an attacker puts in the following:
+```
+[embed src='https://www.youtube.com/embed/12345\x3csvg onload=alert("XSS!")\x3e'][/embed]
+```
+WP processes this to become:
+```
+<p>https://youtube.com/watch?v=12345<svg onload=alert("XSS!")></p>
+```
+Here, the opening and closing `p` tags surround **2** elements: Some text (`https://youtube.com/watch?v=12345`) and an SVG container (`<svg onload=alert("XSS!")>`). The browser loads this empty SVG container whose only attribute is an `onload` event attribute (which is executed automatically when the page loads). Thus, as soon as the compromised post/page loads, the browser shows an alert box with the word "XSS."
+
+### Demonstration
+
+The following video demonstrates this exploit: [link goes here]
+
+### Other Details
+* **CVE**: 2017-6817
+* **Type**: XSS
+* **Affects**: WordPress <=4.7.2
+* **Patched**: WordPress 4.7.3
