@@ -6,7 +6,7 @@ Assignment: Identify and demonstrate POCs for at least 3 exploits affecting olde
 * [CVE 2015-5714](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-5714): Authenticated Shortcode Tags Cross-Site Scripting (XSS)
 * [CVE 2017-6817](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-6817): Authenticated Stored Cross-Site Scripting (XSS) in YouTube URL Embeds
 
-## Authenticated Stored Cross-Site Scripting (XSS)
+## #1: Authenticated Stored Cross-Site Scripting (XSS)
 
 This exploit requires an attacker to have an account with posting capabilities (i.e. a minimum of Contributor level permissions). In this vulnerability, an attacker can insert arbitrary Javascript via a specially-crafted shortcode onto a page or a post.
 
@@ -44,7 +44,7 @@ The following video demonstrates this exploit: [link goes here]
 * **Affects**: WordPress <=4.2.2
 * **Patched**: WordPress 4.2.3
 
-## Authenticated Shortcode Tags XSS
+## #2: Authenticated Shortcode Tags XSS
 
 Like the last one, this vulnerability also requires the attacker to have an account with posting capabilities. It takes advantage of a shortfall in WordPress's KSES filtering (which filters out non-whitelisted HTML tags). 
 
@@ -82,7 +82,7 @@ The following video demonstrates this exploit: [link goes here]
 * **Affects**: WordPress <=4.3
 * **Patched**: WordPress 4.3.1
 
-## Authenticated Stored XSS in YouTube URL Embeds
+## #3: Authenticated Stored XSS in YouTube URL Embeds
 
 Again, this vulnerability requires at least Contributor level privileges onto the site. Through this exploit, an attacker could take advantage of YouTube URL embeds to achieve a **stored/persistent** XSS attack that can affect any user who loads the compromised page.
 
